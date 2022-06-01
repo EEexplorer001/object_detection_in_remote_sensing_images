@@ -8,3 +8,18 @@ Secondly, DOTA devkit is used to segment training set and validation set in DOTA
 
 Finally, various data augmentation strategies are used to improve the detection performance of the model. The strategies include image flipping, multi-scale random cropping, shift scale rotation, brightness and contrast transformation, color transformation, multi-scale testing and so on. In this paper, the effectiveness of various data augmentation strategies is illustrated through ablation experiments. Data augmentation strategies have improved mAP by 6.0 percentage points from the Swin-T_3x baseline to 77.7, achieving good detection performance.
 
+## Usage
+### Set up Environment
+```
+wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
+
+conda create -n py37 python=3.7
+
+conda activate py37
+
+wget https://bootstrap.pypa.io/get-pip.py
+
+python3 get-pip.py
+
+conda install pytorch=1.7.0 torchvision cudatoolkit=10.2 -c pytorch
+```
