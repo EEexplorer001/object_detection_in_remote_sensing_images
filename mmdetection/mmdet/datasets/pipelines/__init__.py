@@ -14,6 +14,12 @@ from .transforms import (Albu, CutOut, Expand, MinIoURandomCrop, MixUp, Mosaic,
                          RandomCenterCropPad, RandomCrop, RandomFlip,
                          RandomShift, Resize, SegRescale, YOLOXHSVRandomAug)
 
+from .transforms_rotated import (PesudoRotatedRandomFlip,
+                                 PesudoRotatedResize, RotatedRandomFlip,
+                                 RotatedResize, RandomRotate,
+                                 BoxToBox)
+from .transforms_others import (HSVRandomAug, GtFilter, TempVisualize)
+
 __all__ = [
     'Compose', 'to_tensor', 'ToTensor', 'ImageToTensor', 'ToDataContainer',
     'Transpose', 'Collect', 'DefaultFormatBundle', 'LoadAnnotations',
@@ -24,5 +30,11 @@ __all__ = [
     'InstaBoost', 'RandomCenterCropPad', 'AutoAugment', 'CutOut', 'Shear',
     'Rotate', 'ColorTransform', 'EqualizeTransform', 'BrightnessTransform',
     'ContrastTransform', 'Translate', 'RandomShift', 'Mosaic', 'MixUp',
-    'RandomAffine', 'YOLOXHSVRandomAug'
+    'RandomAffine', 'YOLOXHSVRandomAug',
+
+    'PesudoRotatedRandomFlip',
+    'PesudoRotatedResize', 'RotatedRandomFlip',
+    'RotatedResize', 'RandomRotate',
+    'BoxToBox',
+    'HSVRandomAug', 'GtFilter', 'TempVisualize'
 ]
