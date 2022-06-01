@@ -12,14 +12,33 @@ Finally, various data augmentation strategies are used to improve the detection 
 ### Set up Environment
 ```
 wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
-
 conda create -n py37 python=3.7
-
 conda activate py37
-
 wget https://bootstrap.pypa.io/get-pip.py
-
 python3 get-pip.py
-
 conda install pytorch=1.7.0 torchvision cudatoolkit=10.2 -c pytorch
+```
+### mmdetection
+```
+pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu102/torch1.7.0/index.html
+pip install -r requirements/build.txt
+pip install -v -e .
+```
+### DOTA_devkit
+```
+conda install swig
+swig -c++ -python polyiou.i
+python setup.py build_ext --inplace
+```
+### Train
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 nohup ./tools/dist_train.sh ./configs/swin/cascade_rcnn_swin-t-p4-w7_fpn_max_ms_train_3x_coco_dota.py 8 > nohup.log 2>&1 &
+```
+### Test
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./tools/dist_test.sh ./configs/swin/cascade_rcnn_swin-t-p4-w7_fpn_max_ms_train_3x_coco_dota.py "./work_dirs/cascade_rcnn_swin-t-p4-w7_fpn_max_ms_train_3x_coco_dota/epoch_35.pth" 8 --out "/home/ZhangYumeng/Workspace/DOTA_devkit-master/DOTA_devkit-master/outcome_max_35.pkl" --eval bbox
+```
+### Merge
+```
+python HBB_pkl_reader.py --pkl_name outcome_max_35.pkl 
 ```
