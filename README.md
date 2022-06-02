@@ -42,6 +42,31 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./tools/dist_test.sh ./configs/swin/cascade
 ```
 python HBB_pkl_reader.py --pkl_name outcome_max_35.pkl 
 ```
+## Results
+Evaluation before test @34th epoch:
+```
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.463
+Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.709
+Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.521
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.330
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.488
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.544
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.552
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.567
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.567
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.404
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.611
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.654
+```
+
+After merge:
+```
+map: 0.7772415280063075
+classaps:  [96.15830979 81.61095892 51.94498409 67.58662255 70.36897231 84.70424018
+ 91.13452151 95.60817726 67.86447364 86.79844594 65.46443074 66.80557472
+ 85.52208765 73.23524553 81.05524719]
+```
+
 ## Reference
 Some of the source code is modified from the DOTA_devkit and mmdetection codebase.
 
