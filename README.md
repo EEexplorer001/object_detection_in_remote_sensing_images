@@ -78,6 +78,6 @@ Swin Transformer：https://github.com/SwinTransformer/Swin-Transformer-Object-De
 
 -----
 
-Copyright (c) 2022 Marina Akitsuki. All rights reserved.
+Copyright (c) 2022 Yumeng Zhang. All rights reserved.
 
 Date modified: 2022/06/02
