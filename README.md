@@ -75,3 +75,9 @@ DOTA devkit：https://github.com/CAPTAIN-WHU/DOTA_devkit
 mmdetection：https://github.com/open-mmlab/mmdetection
 
 Swin Transformer：https://github.com/SwinTransformer/Swin-Transformer-Object-Detection
+
+-----
+
+Copyright (c) 2022 Marina Akitsuki. All rights reserved.
+
+Date modified: 2022/06/02
