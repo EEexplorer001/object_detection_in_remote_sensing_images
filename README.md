@@ -42,3 +42,11 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./tools/dist_test.sh ./configs/swin/cascade
 ```
 python HBB_pkl_reader.py --pkl_name outcome_max_35.pkl 
 ```
+## Reference
+Some of the source code is modified from the DOTA_devkit and mmdetection codebase.
+
+DOTA devkit：https://github.com/CAPTAIN-WHU/DOTA_devkit
+
+mmdetection：https://github.com/open-mmlab/mmdetection
+
+Swin Transformer：https://github.com/SwinTransformer/Swin-Transformer-Object-Detection
