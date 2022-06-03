@@ -1,4 +1,4 @@
-# Object Detection in Remote Sensing Images with Swin Transformer
+# Object Detection in Remote Sensing Images
 ## Introduction
 Object detection in remote sensing images has been widely used in many fields. With the development of science and technology, people hope to process massive remote sensing image data and obtain useful information automatically. However, object detection in remote sensing images is always a challenging task due to complex background, variable illumination conditions, large image size, wide range of object scales and angle orientations, dense arrangement and overlapping occlusion between objects. To solve the above problems, we propose an object detection framework based on convolutional neural networks and attention mechanism, with the main work as follows:
 
